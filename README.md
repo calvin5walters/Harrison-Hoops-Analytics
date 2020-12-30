@@ -1,2 +1,2 @@
 # HarrisonHoopsAnalytics
-R Shiny script for Harrison HS basketball program
+R Shiny script for Harrison High School's basketball analytics web application.
