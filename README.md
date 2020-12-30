@@ -1,2 +1,2 @@
 # HarrisonHoopsAnalytics
-R Shiny web app for Harrison HS basketball analytics
+R Shiny web application for Harrison HS basketball analytics
