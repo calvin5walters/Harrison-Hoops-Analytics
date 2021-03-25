@@ -1,5 +1,5 @@
 # HARRISON BASKETBALL ANALYTICS 2020-21
-# updated through 12/20/2020
+# updated through 03/25/2021
 
 library(tidyverse)
 library(xml2)
@@ -73,6 +73,119 @@ tri_west <- opponent("Tri-West",
                      "Away",
                      "https://www.maxpreps.com/games/12-23-2020/basketball-winter-20-21/harrison-vs-tri-west-hendricks.htm?c=AG6rQYDA8kO-EG_c-wIfDA#tab=box-score&schoolid=")
 
+delta <- opponent("Delta",
+                  "Away",
+                  "https://www.maxpreps.com/games/12-30-2020/basketball-winter-20-21/delta-vs-harrison.htm?c=AIoYNun2m0Oq4BVLixHXBg#tab=box-score&schoolid=",
+                  "incorrect",
+                  data.frame('Pts' = 42,  'FG' = 17,  'FGA' = 42, 'FG%' = 40, '3FG' = 4, '3FGA' = 20, '3FG%' = 20, 
+                             '2FG' = 13, '2FGA' = 22, '2FG%' = 20, 'FT' = 4, 'FTA' = 10, 'FT%' = 40, 
+                             'Off' = 9, 'Def' = 9, 'Tot Reb' = 18, 'Ast' = 7, 'Stls' = 3, 'Blk' = 0, 'TO' = 8, 'PF' = 19,
+                             check.names = FALSE))
+
+arsenal_tech <- opponent("Arsenal Tech",
+                         "Away",
+                         "https://www.maxpreps.com/games/1-8-2021/basketball-winter-20-21/harrison-vs-indianapolis-arsenal-technical.htm?c=RlEVHzVv7Uma_8SC3Hmknw#tab=box-score&schoolid=",
+                         "incorrect",
+                         data.frame('Pts' = 62,  'FG' = 21,  'FGA' = 47, 'FG%' = 44, '3FG' = 3, '3FGA' = 13, '3FG%' = 23, 
+                                    '2FG' = 18, '2FGA' = 34, '2FG%' = 53, 'FT' = 17, 'FTA' = 25, 'FT%' = 68, 
+                                    'Off' = 13, 'Def' = 25, 'Tot Reb' = 38, 'Ast' = 5, 'Stls' = 2, 'Blk' = 1, 'TO' = 21, 'PF' = 21,
+                                    check.names = FALSE))
+
+lake_central <- opponent("Lake Central",
+                         "Away",
+                         "https://www.maxpreps.com/games/1-9-2021/basketball-winter-20-21/harrison-vs-lake-central.htm?c=jh-C2C85gE2Fb6Zh8nmBzw#tab=box-score&schoolid=",
+                         "empty",
+                         data.frame('Pts' = 63,  'FG' = 26,  'FGA' = 38, 'FG%' = 68, '3FG' = 4, '3FGA' = 6, '3FG%' = 67, 
+                                    '2FG' = 22, '2FGA' = 32, '2FG%' = 69, 'FT' = 7, 'FTA' = 12, 'FT%' = 58, 
+                                    'Off' = 4, 'Def' = 11, 'Tot Reb' = 15, 'Ast' = 19, 'Stls' = 3, 'Blk' = 2, 'TO' = 6, 'PF' = 10,
+                                    check.names = FALSE))
+
+kokomo <- opponent("Kokomo",
+                   "Away",
+                   "https://www.maxpreps.com/games/1-15-2021/basketball-winter-20-21/harrison-vs-kokomo.htm?c=6uQ6YzEIjkuDv2NaXF9s2Q#tab=box-score&schoolid=")
+
+west_lafayette <- opponent("West Lafayette",
+                           "Home",
+                           "https://www.maxpreps.com/games/1-16-2021/basketball-winter-20-21/harrison-vs-west-lafayette.htm?c=ATvvqF2lzkCeWuvGM_Gn_Q#tab=box-score&schoolid=",
+                           "empty",
+                           data.frame('Pts' = 35,  'FG' = 15,  'FGA' = 47, 'FG%' = 32, '3FG' = 2, '3FGA' = 17, '3FG%' = 12,
+                                      '2FG' = 13, '2FGA' = 30, '2FG%' = 43, 'FT' = 3, 'FTA' = 8, 'FT%' = 38,
+                                      'Off' = 6, 'Def' = 19, 'Tot Reb' = 25, 'Ast' = 4, 'Stls' = 5, 'Blk' = 0, 'TO' = 18, 'PF' = 19,
+                                      check.names = FALSE))
+
+anderson <- opponent("Anderson",
+                     "Away",
+                     "https://www.maxpreps.com/games/1-22-2021/basketball-winter-20-21/anderson-vs-harrison.htm?c=hR-7mnU3xE6p4GsgRsmHOQ#tab=box-score&schoolid=",
+                     "incorrect",
+                     data.frame('Pts' = 57,  'FG' = 18,  'FGA' = 32, 'FG%' = 56, '3FG' = 2, '3FGA' = 4, '3FG%' = 50,
+                                '2FG' = 16, '2FGA' = 28, '2FG%' = 57, 'FT' = 19, 'FTA' = 26, 'FT%' = 73,
+                                'Off' = 6, 'Def' = 19, 'Tot Reb' = 25, 'Ast' = 9, 'Stls' = 7, 'Blk' = 3, 'TO' = 17, 'PF' = 14,
+                                check.names = FALSE))
+
+merrillville <- opponent("Merrillville",
+                         "Away",
+                         "https://www.maxpreps.com/games/1-23-2021/basketball-winter-20-21/harrison-vs-merrillville.htm?c=GWg9NUfl70-CQI5Fm789Ig#tab=box-score&schoolid=",
+                         "incorrect",
+                         data.frame('Pts' = 55,  'FG' = 21,  'FGA' = 52, 'FG%' = 40, '3FG' = 8, '3FGA' = 20, '3FG%' = 40,
+                                    '2FG' = 13, '2FGA' = 32, '2FG%' = 41, 'FT' = 5, 'FTA' = 16, 'FT%' = 31,
+                                    'Off' = 9, 'Def' = 12, 'Tot Reb' = 21, 'Ast' = 13, 'Stls' = 3, 'Blk' = 1, 'TO' = 10, 'PF' = 15,
+                                    check.names = FALSE))
+
+richmond <- opponent("Richmond",
+                     "Home",
+                     "https://www.maxpreps.com/games/1-29-2021/basketball-winter-20-21/harrison-vs-richmond.htm?c=FLnTqYHAz06QkX_V3uR9uw#tab=box-score&schoolid=")
+
+mccutcheon <- opponent("McCutcheon",
+                       "Home",
+                       "https://www.maxpreps.com/games/1-30-2021/basketball-winter-20-21/harrison-vs-mccutcheon.htm?c=ayc7sbI720emRnm2SRrdTQ#tab=box-score&schoolid=")
+
+logansport <- opponent("Logansport",
+                       "Home",
+                       "https://www.maxpreps.com/games/2-4-2021/basketball-winter-20-21/harrison-vs-logansport.htm?c=2DRdItvFAk-b6KF6ms9bxA#tab=box-score&schoolid=")
+
+central_catholic <- opponent("Central Catholic",
+                             "Away",
+                             "https://www.maxpreps.com/games/2-6-2021/basketball-winter-20-21/harrison-vs-lafayette-central-catholic.htm?c=aYdylPFSRUuZHAWfVTZhHA#tab=box-score&schoolid=")
+
+westfield <- opponent("Westfield",
+                      "Home",
+                      "https://www.maxpreps.com/games/2-9-2021/basketball-winter-20-21/harrison-vs-westfield.htm?c=Lpz1mNig1U2QSPJpS92Wlg#tab=box-score&schoolid=")
+
+muncie_central <- opponent("Muncie Central",
+                           "Home",
+                           "https://www.maxpreps.com/games/2-12-2021/basketball-winter-20-21/harrison-vs-muncie-central.htm?c=BQd9iFuJskeULzUQEdHVaA#tab=box-score&schoolid=",
+                           "incorrect",
+                           data.frame('Pts' = 54,  'FG' = 21,  'FGA' = 57, 'FG%' = 36, '3FG' = 6, '3FGA' = 19, '3FG%' = 31,
+                                      '2FG' = 15, '2FGA' = 38, '2FG%' = 39, 'FT' = 6, 'FTA' = 8, 'FT%' = 75,
+                                      'Off' = 10, 'Def' = 10, 'Tot Reb' = 20, 'Ast' = 9, 'Stls' = 7, 'Blk' = 0, 'TO' = 10, 'PF' = 15,
+                                      check.names = FALSE))
+
+plainfield <- opponent("Plainfield",
+                       "Home",
+                       "https://www.maxpreps.com/games/2-13-2021/basketball-winter-20-21/harrison-vs-plainfield.htm?c=p4max5ut3kasMyx7Lqj4wQ#tab=box-score&schoolid=e0b77797-d6df-4d66-92be-05a944fe4154")
+
+marion <- opponent("Marion",
+                   "Away",
+                   "https://www.maxpreps.com/games/2-19-2021/basketball-winter-20-21/harrison-vs-marion.htm?c=8OppD9cQE0-YcVaAsqGJ4Q#tab=box-score&schoolid=",
+                   "incorrect",
+                   data.frame('Pts' = 71,  'FG' = 21,  'FGA' = 48, 'FG%' = 43, '3FG' = 8, '3FGA' = 24, '3FG%' = 33,
+                              '2FG' = 13, '2FGA' = 24, '2FG%' = 54, 'FT' = 21, 'FTA' = 28, 'FT%' = 75,
+                              'Off' = 8, 'Def' = 24, 'Tot Reb' = 32, 'Ast' = 13, 'Stls' = 5, 'Blk' = 3, 'TO' = 10, 'PF' = 15,
+                              check.names = FALSE))
+
+hamilton_heights <- opponent("Hamilton Heights",
+                             "Away",
+                             "https://www.maxpreps.com/games/2-24-2021/basketball-winter-20-21/hamilton-heights-vs-harrison.htm?c=UOM9P7poAUaDHB5aKLAUZQ#tab=box-score&schoolid=",
+                             "incorrect",
+                             data.frame('Pts' = 65,  'FG' = 24,  'FGA' = 47, 'FG%' = 51, '3FG' = 8, '3FGA' = 22, '3FG%' = 36,
+                                        '2FG' = 16, '2FGA' = 25, '2FG%' = 64, 'FT' = 9, 'FTA' = 10, 'FT%' = 90,
+                                        'Off' = 4, 'Def' = 14, 'Tot Reb' = 18, 'Ast' = 12, 'Stls' = 4, 'Blk' = 2, 'TO' = 8, 'PF' = 13,
+                                        check.names = FALSE))
+
+jeff_sectionals <- opponent("Lafayette Jeff (Sectionals)",
+                            "Home",
+                            "https://www.maxpreps.com/games/3-5-2021/basketball-winter-20-21/harrison-vs-lafayette-jefferson.htm?c=4uPjhQA4FkaGItwst4X9SA#tab=box-score&schoolid=")
+
 
 # Add each opponent to list
 opponent_list <- list(university,
@@ -80,7 +193,24 @@ opponent_list <- list(university,
                       north_mont,
                       rossville,
                       lebanon,
-                      tri_west)
+                      tri_west,
+                      delta,
+                      arsenal_tech,
+                      lake_central,
+                      kokomo,
+                      west_lafayette,
+                      anderson,
+                      merrillville,
+                      richmond,
+                      mccutcheon,
+                      logansport,
+                      central_catholic,
+                      westfield,
+                      muncie_central,
+                      plainfield,
+                      marion,
+                      hamilton_heights,
+                      jeff_sectionals)
 
 
 # Functions to be used...
@@ -742,4 +872,8 @@ server <- function(input, output) {
 
 shinyApp(ui = ui, server = server)
 
-#deployApp('/Users/cal/Desktop/BasketballAnalytics/HarrisonHoops/')
+
+# if you get an error that path is not recognized,
+# reset R, run script, deploy app
+deployApp('/Users/cal/Desktop/BasketballAnalytics/HarrisonHoops/')
+
